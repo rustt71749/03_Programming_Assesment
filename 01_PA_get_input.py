@@ -1,8 +1,8 @@
 # Component 1 - get user input
 
-
-
 # Number checking function:
+
+
 def int_check(question, low=None, high=None):
 
     # error messages
