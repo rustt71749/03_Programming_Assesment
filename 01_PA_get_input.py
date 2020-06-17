@@ -7,15 +7,8 @@ def int_check(question, low=None, high=None):
 
     # error messages
     if low is not None and high is not None:
-        error = "Please enter an integer between {} and {} " \
-                "(inclusive)".format(low, high)
-    elif low is not None and high is None:
-        error = "Please enter an integer that is more than or " \
-                "equal to {}".format(low)
-    elif low is None and high is not None:
-        error = "Please enter an integer that is less than or " \
-                "equal to {}".format(high)
-
+        error = "Please enter an integer that is 10, 25, 50, or 100 " \
+                .format(low, high)
     else:
         error = "Please enter an integer"
 
@@ -41,6 +34,6 @@ def int_check(question, low=None, high=None):
             continue
 
 # Main routine
-
-highest = int_check("What range do you want to play with? ", 1)
+lowest = 1
+highest = int_check("What is the highest number would you like to play with? ", lowest + 9)
 rounds = int_check("How many rounds would you like to play? ", 1)
