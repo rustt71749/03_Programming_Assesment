@@ -42,6 +42,5 @@ def int_check(question, low=None, high=None):
 
 # Main routine
 
-lowest = int_check("What range do you want to play with? ")
-highest = int_check("High Number: ", lowest + 1)
+highest = int_check("What range do you want to play with? ", 1)
 rounds = int_check("How many rounds would you like to play? ", 1)
