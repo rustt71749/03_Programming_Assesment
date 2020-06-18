@@ -5,6 +5,7 @@
 EQUATION_NUMBER1 = 10
 EQUATION_NUMBER2 = 1
 
+# takes equation numbers and puts them into an equation
 equation1 = int(input("What does {} + {} equal?".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 equation2 = int(input("What does {} - {} equal?".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 equation3 = int(input("What does {} x {} equal?".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
