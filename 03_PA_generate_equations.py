@@ -46,11 +46,14 @@ highest = int_check("What is the highest number you would like to play with? ", 
 rounds = int_check("How many rounds would you like to play? ", 1)
 
 # generate numbers for equation between low and high
-LOW = 1
-HIGH = 6
+LOW = lowest
+HIGH = highest
 
 for item in range(1):
     equation_number1 = random.randint(LOW, HIGH)
     equation_number2 = random.randint(LOW, HIGH)
 
-equation1 = int(input("What does {} + {} equal?".format(lowest, highest)))
+equation1 = int(input("What does {} + {} equal? ".format(highest, lowest)))
+equation2 = int(input("What does {} - {} equal? ".format(highest, lowest)))
+equation3 = int(input("What does {} x {} equal? ".format(highest, lowest)))
+equation4 = int(input("What does {} / {} equal? ".format(highest, lowest)))
