@@ -1,5 +1,7 @@
 # Component 1 - get user input
 
+# get user input for low and high and rounds they would like to play
+
 # Number checking function:
 
 
