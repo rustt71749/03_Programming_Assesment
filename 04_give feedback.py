@@ -2,22 +2,13 @@
 # compare user input for answer and actual answer
 # give appropriate feedback based on input
 
-# Number checking function
+# Number checking function:
 
 
 def int_check(question, low=None, high=None):
-    # error messages
-    if low is not None and high is not None:
-        error = "Please enter an integer between {} and {} " \
-                "(inclusive)".format(low, high)
-    elif low is not None and high is None:
-        error = "Please enter an integer that is more than or " \
-                "equal to {}".format(low)
-    elif low is None and high is not None:
-        error = "Please enter an integer that is less than or " \
-                "equal to {}".format(high)
+    error = "Please eneter an integer"
 
-    else:
+    valid 
         error = "Please enter an integer"
 
     while True:
@@ -40,7 +31,6 @@ def int_check(question, low=None, high=None):
         except ValueError:
             print(error)
             continue
-
 # hardcoded numbers
 EQUATION_NUMBER1 = 10
 EQUATION_NUMBER2 = 1
@@ -53,31 +43,31 @@ ANSWER4 = EQUATION_NUMBER1 // EQUATION_NUMBER2
 ANSWER5 = EQUATION_NUMBER1 ** EQUATION_NUMBER2
 
 # Compares user answer to actual answer
-equation1 = int_check(input("What does {} + {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
+equation1 = int(input("What does {} + {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 if equation1 != ANSWER1:
     print("Sorry that answer is not correct. The answer is {}".format(ANSWER1))
 else:
     print("That answer is correct. Great job!")
 
-equation2 = int_check(input("What does {} - {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
+equation2 = int(input("What does {} - {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 if equation2 != ANSWER2:
     print("Sorry that answer is not correct. The answer is {}".format(ANSWER2))
 else:
     print("That answer is correct. Great job!")
 
-equation3 = int_check(input("What does {} x {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
+equation3 = int(input("What does {} x {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 if equation3 != ANSWER3:
     print("Sorry that answer is not correct. The answer is {}".format(ANSWER3))
 else:
     print("That answer is correct. Great job!")
 
-equation4 = int_check(input("What does {} / {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
+equation4 = int(input("What does {} / {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 if equation4 != ANSWER4:
     print("Sorry that answer is not correct. The answer is {}".format(ANSWER4))
 else:
     print("That answer is correct. Great job!")
 
-equation5 = int_check(input("What does {} ^ {} equal?".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
+equation5 = int(input("What does {} ^ {} equal? ".format(EQUATION_NUMBER1, EQUATION_NUMBER2)))
 if equation5 != ANSWER5:
     print("Sorry, that answer is not correct. The answer is {}".format(ANSWER5))
 else:
