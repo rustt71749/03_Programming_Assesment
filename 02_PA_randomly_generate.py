@@ -1,5 +1,4 @@
 # Component 2 - randomly generate numbers
-
 # randomly generate numbers between low and high
 
 import random
