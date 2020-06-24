@@ -7,10 +7,8 @@
 
 def int_check(question, low=None, high=None):
 
-    error = "Please enter an integer"
-
     valid = False
-
+    error = "Please enter an integer"
     while not valid:
 
         try:
@@ -18,7 +16,6 @@ def int_check(question, low=None, high=None):
 
             if low <= response <= high:
                 return response
-
             else:
                 print(error)
 
