@@ -44,14 +44,13 @@ def int_check(question, low=None, high=None):
             continue
 
 # Main routine
-lowest = int_check("What is the lowest number you would like to play with? ")
-highest = int_check("What is the highest number you would like to play with? ", lowest + 1)
+lowest = int_check("What is the lowest number you would like to use? ")
+highest = int_check("What is the highest number you would like to use? ", lowest + 1)
 questions = int_check("How many questions would you like? ", 1, 10)
 
-
-for item in range(1):
-    equation_number1 = random.randint(lowest, highest)
-    equation_number2 = random.randint(lowest, highest)
+# randomly generates numbers between user input
+equation_number1 = random.randint(lowest, highest)
+equation_number2 = random.randint(lowest, highest)
 
 answer1 = equation_number1 + equation_number2
 answer2 = equation_number1 - equation_number2
@@ -59,26 +58,35 @@ answer3 = equation_number1 * equation_number2
 answer4 = equation_number1 // equation_number2
 
 # Compares user answer to actual answer
-equation1 = int_check(input("What does {} + {} equal? ".format(equation_number1, equation_number2)))
+question = "What does {} + {} equal? ".format(equation_number1, equation_number2)
+equation1 = int_check(question, -(highest*highest), highest*highest)
+
 if equation1 != answer1:
-    print("Sorry, that answer is not correct. The answer is {}".format(answer1))
+    print("Sorry, that answer is not correct. The answer is {}.".format(answer1))
 else:
     print("That answer is correct. Great job!")
 
-equation2 = int_check(input("What does {} - {} equal? ".format(equation_number1, equation_number2)))
+question2 = "What does {} - {} equal? ".format(equation_number1, equation_number2)
+equation2 = int_check(question2, -(highest*highest), highest*highest)
+
 if equation2 != answer2:
-    print("Sorry, that answer is not correct. The answer is {}".format(answer2))
+    print("Sorry, that answer is not correct. The answer is {}.".format(answer2))
 else:
     print("That answer is correct. Great job!")
 
-equation3 = int_check(input("What does {} x {} equal? ".format(equation_number1, equation_number2)))
+
+question3 = "What does {} x {} equal? ".format(equation_number1, equation_number2)
+equation3 = int_check(question3, -(highest*highest), highest*highest)
+
 if equation3 != answer3:
-    print("Sorry, that answer is not correct. The answer is {}".format(answer3))
+    print("Sorry, that answer is not correct. The answer is {}.".format(answer3))
 else:
     print("That answer is correct. Great job!")
 
-equation4 = int_check(input("What does {} / {} equal? ".format(equation_number1, equation_number2)))
+question4 = "What does {} / {} equal ? ".format(equation_number1, equation_number2)
+equation4 = int_check(question4, -(highest*highest), highest*highest)
+
 if equation4 != answer4:
-    print("Sorry, that answer is not correct. The answer is {}".format(answer4))
+    print("Sorry, that answer is not correct. The answer is {}.".format(answer4))
 else:
     print("That answer is correct. Great job!")
