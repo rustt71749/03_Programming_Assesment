@@ -43,10 +43,6 @@ def int_check(question, low=None, high=None):
             print(error)
             continue
 
-# adds questions to incorrect and correct lists to be displayed later
-incorrect_answer = []
-correct_answer = []
-
 # Main routine
 lowest = int_check("What is the lowest number you would like to use? ")
 highest = int_check("What is the highest number you would like to use? ", lowest + 1)
@@ -56,8 +52,34 @@ questions = int_check("How many questions would you like? ", 1, 10)
 equation_num1 = random.randint(lowest, highest)
 equation_num2 = random.randint(lowest, highest)
 
-# randomly chooses operation for equation and gives correct answer
-operation = "+", "-", "*"
-question = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
-answer = eval(question)
+# list for questions and answers to be used at end of game
+right = 0
+wrong = 0
 
+game_history = []
+
+# Start quiz
+for item in range(1, questions + 1):
+
+  operation = ["+", "-", "*"]
+  question = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
+  
+  correct_answer = eval(question)
+  
+  answer = int_check(question, -(highest*highest), (highest*highest)
+
+  if answer == correct_answer:
+    print("That answer is correct. Great job!")
+    right += 1
+  else:
+    print("Sorry, that answer is not correct. The answer is {}.".format(correct_answer))
+    wrong +=1
+
+  equation_answer = "Equation {}: {}".format(item, answer)
+  game_history.append(equation_answer)
+
+print()
+print(||||| Answers |||||)
+
+for item in game_history:
+  print(item)
