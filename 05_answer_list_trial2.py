@@ -53,40 +53,11 @@ highest = int_check("What is the highest number you would like to use? ", lowest
 questions = int_check("How many questions would you like? ", 1, 10)
 
 # randomly generates numbers between user input
-equation_number1 = random.randint(lowest, highest)
-equation_number2 = random.randint(lowest, highest)
+equation_num1 = random.randint(lowest, highest)
+equation_num2 = random.randint(lowest, highest)
 
-# randomly generates
-# Compares user answer to actual answer
-question = "What does {} + {} equal? ".format(equation_number1, equation_number2)
-equation1 = int_check(question, -(highest*highest), highest*highest)
+# randomly chooses operation for equation and gives correct answer
+operation = "+", "-", "*"
+question = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
+answer = eval(question)
 
-if equation1 != answer1:
-    print("Sorry, that answer is not correct. The answer is {}.".format(answer1))
-else:
-    print("That answer is correct. Great job!")
-
-question2 = "What does {} - {} equal? "
-equation2 = int_check(question2, -(highest*highest), highest*highest)
-
-if equation2 != answer2:
-    print("Sorry, that answer is not correct. The answer is {}.".format(answer2))
-else:
-    print("That answer is correct. Great job!")
-
-
-question3 = "What does {} x {} equal? ".format(equation_number1, equation_number2)
-equation3 = int_check(question3, -(highest*highest), highest*highest)
-
-if equation3 != answer3:
-    print("Sorry, that answer is not correct. The answer is {}.".format(answer3))
-else:
-    print("That answer is correct. Great job!")
-
-question4 = "What does {} / {} equal ? ".format(equation_number1, equation_number2)
-equation4 = int_check(question4, -(highest*highest), highest*highest)
-
-if equation4 != answer4:
-    print("Sorry, that answer is not correct. The answer is {}.".format(answer4))
-else:
-    print("That answer is correct. Great job!")
