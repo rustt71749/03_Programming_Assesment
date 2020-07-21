@@ -1,10 +1,10 @@
-# Component 4
+# Component 5
 # compare user input for answer and actual answer
 # give appropriate feedback based on input
 
 import random
 
-# Number checking function:
+# Number checking function
 
 
 def int_check(question, low=None, high=None):

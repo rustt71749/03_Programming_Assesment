@@ -1,10 +1,11 @@
-# Component 4
+# Component 5 trial 2
 # compare user input for answer and actual answer
 # give appropriate feedback based on input
+# shortened length of code
 
 import random
 
-# Number checking function:
+# Number checking function
 
 
 def int_check(question, low=None, high=None):
@@ -60,8 +61,12 @@ game_history = []
 
 # Start quiz
 for item in range(1, questions + 1):
+# operation list 
+  operations = ["+", "-", "*"]
+  
+#randomly chooses operation
+  operation = random.choice(operations)
 
-  operation = ["+", "-", "*"]
   question = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
   
   correct_answer = eval(question)
