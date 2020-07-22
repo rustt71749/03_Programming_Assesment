@@ -1,10 +1,10 @@
-# Component 4
+# Component 5
 # compare user input for answer and actual answer
 # give appropriate feedback based on input
 
 import random
 
-# Number checking function:
+# Number checking function
 
 
 def int_check(question, low=None, high=None):
@@ -43,10 +43,6 @@ def int_check(question, low=None, high=None):
             print(error)
             continue
 
-# adds questions to incorrect and correct lists to be displayed later
-incorrect_answer = []
-correct_answer = []
-
 # Main routine
 lowest = int_check("What is the lowest number you would like to use? ")
 highest = int_check("What is the highest number you would like to use? ", lowest + 1)
@@ -61,9 +57,13 @@ answer2 = equation_number1 - equation_number2
 answer3 = equation_number1 * equation_number2
 answer4 = equation_number1 // equation_number2
 
+game_history = []
+right = 0
+wrong = 0
+
 # Compares user answer to actual answer
 question = "What does {} + {} equal? ".format(equation_number1, equation_number2)
-equation1 = int_check(question, -(highest*highest), highest*highest)
+equation1 = int_check(question, -(highest*highest), (highest*highest))
 
 if equation1 != answer1:
     print("Sorry, that answer is not correct. The answer is {}.".format(answer1))

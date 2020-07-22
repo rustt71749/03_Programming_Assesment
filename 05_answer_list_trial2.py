@@ -1,10 +1,11 @@
-# Component 4
+# Component 5 trial 2
 # compare user input for answer and actual answer
 # give appropriate feedback based on input
+# shortened length of code
 
 import random
 
-# Number checking function:
+# Number checking function
 
 
 def int_check(question, low=None, high=None):
@@ -43,21 +44,52 @@ def int_check(question, low=None, high=None):
             print(error)
             continue
 
-# adds questions to incorrect and correct lists to be displayed later
-incorrect_answer = []
-correct_answer = []
 
 # Main routine
 lowest = int_check("What is the lowest number you would like to use? ")
 highest = int_check("What is the highest number you would like to use? ", lowest + 1)
 questions = int_check("How many questions would you like? ", 1, 10)
 
-# randomly generates numbers between user input
-equation_num1 = random.randint(lowest, highest)
-equation_num2 = random.randint(lowest, highest)
+# list for questions and answers to be used at end of game
+right = 0
+wrong = 0
 
-# randomly chooses operation for equation and gives correct answer
-operation = "+", "-", "*"
-question = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
-answer = eval(question)
+game_history = []
 
+# operation list
+operations = ["+", "-", "*"]
+
+# Start quiz
+for item in range(1, questions + 1):
+
+    # randomly generates numbers between user input
+    equation_num1 = random.randint(lowest, highest)
+    equation_num2 = random.randint(lowest, highest)
+
+    # randomly chooses operation
+    operation = random.choice(operations)
+
+    # generates equations and equation answers
+    display_equation = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
+    equation = "{} {} {}".format(equation_num1, operation, equation_num2)
+    correct_answer = eval(equation)
+
+    answer = int_check(display_equation, -(highest * highest), (highest * highest))
+
+    if answer == correct_answer:
+        feedback = "Your answer of {} was correct. Great job!".format(answer)
+        print(feedback)
+        right += 1
+    else:
+        feedback = "Sorry, your answer was not correct. The answer was {}.".format(correct_answer)
+        print(feedback)
+        wrong += 1
+
+    equation_answer = "Equation {}: {} {}".format(item, display_equation, feedback)
+    game_history.append(equation_answer)
+
+print()
+print("| | | | | Answers | | | | |")
+
+for item in game_history:
+    print(item)
