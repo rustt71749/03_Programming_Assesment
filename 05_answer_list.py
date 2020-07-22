@@ -63,7 +63,11 @@ wrong = 0
 
 # Compares user answer to actual answer
 question = "What does {} + {} equal? ".format(equation_number1, equation_number2)
+<<<<<<< HEAD
 equation1 = int_check(question, -(highest*highest), (highest*highest))
+=======
+equation1 = int_check(question, -(highest*highest), (highest*highest)
+>>>>>>> a55528c2f96bb2f163b5215ea8b430be8a2d7fda
 
 if equation1 != answer1:
     print("Sorry, that answer is not correct. The answer is {}.".format(answer1))
