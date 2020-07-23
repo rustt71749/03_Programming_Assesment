@@ -1,7 +1,7 @@
-# Component 5 trial 2
-# compare user input for answer and actual answer
-# give appropriate feedback based on input
-# shortened output to make it easier to read
+# Final Quiz
+# add statement generator
+# add instructions
+# add if user wants to keep playing at end of quiz
 
 import random
 
@@ -44,8 +44,28 @@ def int_check(question, low=None, high=None):
             print(error)
             continue
 
+# function to print out statements and apply characters around them
+
+
+def statement_generator(statement, char):
+    print()
+    print(char*len(statement))
+    print(statement)
+    print(char * len(statement))
+    print()
 
 # Main routine
+
+# Intro / Rules
+
+print("| | | | Welcome to Basic Facts Quiz | | | |")
+print()
+print("Answer every question as best as you can")
+print()
+print("Once you have entered your answer press the enter key to submit"
+      "and move on to the next question")
+print()
+
 # gets user input for numbers and questions
 lowest = int_check("What is the lowest number you would like to use? ")
 highest = int_check("What is the highest number you would like to use? ", lowest + 1)
