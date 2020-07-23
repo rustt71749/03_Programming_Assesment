@@ -44,10 +44,6 @@ def int_check(question, low=None, high=None):
             print(error)
             continue
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a55528c2f96bb2f163b5215ea8b430be8a2d7fda
 # Main routine
 lowest = int_check("What is the lowest number you would like to use? ")
 highest = int_check("What is the highest number you would like to use? ", lowest + 1)
@@ -57,7 +53,6 @@ questions = int_check("How many questions would you like? ", 1, 10)
 right = 0
 wrong = 0
 
-<<<<<<< HEAD
 game_history = []
 
 # operation list
@@ -97,40 +92,6 @@ print("| | | | | Results | | | | |")
 
 for item in game_history:
     print(item)
-=======
-# list for questions and answers to be used at end of game
-right = 0
-wrong = 0
 
-game_history = []
 
-# Start quiz
-for item in range(1, questions + 1):
-# operation list 
-  operations = ["+", "-", "*"]
-  
-#randomly chooses operation
-  operation = random.choice(operations)
 
-  question = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
-  
-  correct_answer = eval(question)
-  
-  answer = int_check(question, -(highest*highest), (highest*highest)
-
-  if answer == correct_answer:
-    print("That answer is correct. Great job!")
-    right += 1
-  else:
-    print("Sorry, that answer is not correct. The answer is {}.".format(correct_answer))
-    wrong +=1
-
-  equation_answer = "Equation {}: {}".format(item, answer)
-  game_history.append(equation_answer)
-
-print()
-print(||||| Answers |||||)
-
-for item in game_history:
-  print(item)
->>>>>>> a55528c2f96bb2f163b5215ea8b430be8a2d7fda
