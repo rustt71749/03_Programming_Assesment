@@ -128,7 +128,8 @@ for item in range(1, questions + 1):
     equation = "{} {} {}".format(equation_num1, operation, equation_num2)
     correct_answer = eval(equation)
 
-    #
+    print()
+    # generates answer for any equation generated
     answer = int_check(display_equation, -(highest * highest), (highest * highest))
 
     # compares user answer to actual answer
@@ -170,4 +171,8 @@ print("Answers Correct: {} | {:.0f}%".format(right, percent_r))
 print("Answers Incorrect: {} | {:.0f}%".format(wrong, percent_w))
 print()
 
-string_checker("Would you like to go again? ")
+# if user wants to do quiz again user can redo it without having to re run the code
+go_again = string_checker("Would you like to do the quiz again? ", "")
+
+if go_again == "":
+
