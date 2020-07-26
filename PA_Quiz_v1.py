@@ -84,14 +84,12 @@ def instructions():
     instruction = string_checker("Would you like to see the instructions? ", ["yes", "no"])
 
     if instruction == "yes":
-        print()
         print("| | | | | Quiz Instructions | | | | |")
         print()
         print("This is a simple math based quiz")
         print("Answer every question as best you can")
         print()
         print("Good luck!")
-        print()
     else:
         return ""
 
