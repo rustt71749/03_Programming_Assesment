@@ -4,7 +4,7 @@
 
 import random
 
-# Number checking function:
+# Integer checking function:
 
 
 def int_check(question, low=None, high=None):
@@ -58,8 +58,8 @@ answer3 = equation_number1 * equation_number2
 answer4 = equation_number1 // equation_number2
 
 # Compares user answer to actual answer
-question = "What does {} + {} equal? ".format(equation_number1, equation_number2)
-equation1 = int_check(question, -(highest*highest), highest*highest)
+question0 = "What does {} + {} equal? ".format(equation_number1, equation_number2)
+equation1 = int_check(question0, -(highest*highest), highest*highest)
 
 if equation1 != answer1:
     print("Sorry, that answer is not correct. The answer is {}.".format(answer1))
