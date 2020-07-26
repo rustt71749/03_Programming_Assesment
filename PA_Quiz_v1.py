@@ -102,6 +102,7 @@ lowest = int_check("What is the lowest number you would like to use? ")
 highest = int_check("What is the highest number you would like to use? ", lowest + 1)
 
 questions = int_check("How many questions would you like? ", 1, 10)
+print()
 
 
 # list for questions and answers to be used at end of game
