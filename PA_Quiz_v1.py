@@ -25,6 +25,7 @@ def string_checker(question, to_check):
         # if item not in list, print error
         print("Sorry, that response in invalid")
         print("Please enter yes or no")
+        print()
 
 # Integer checking function
 
@@ -36,11 +37,10 @@ def int_check(question, low=None, high=None):
                 "(inclusive)".format(low, high)
     elif low is not None and high is None:
         error = "Please enter an integer that is more than or " \
-                "equal to {}".format(low)
+                "equal to {}".format(lowest)
     elif low is None and high is not None:
         error = "Please enter an integer that is less than or " \
-                "equal to {}".format(high)
-
+                "equal to {}".format(highest)
     else:
         error = "Please enter an integer"
 
@@ -53,11 +53,13 @@ def int_check(question, low=None, high=None):
             # Checks response is not low
             if low is not None and response < low:
                 print(error)
+                print()
                 continue
 
             # Checks response is not too high
             if high is not None and response > high:
                 print(error)
+                print()
                 continue
 
             return response
@@ -65,6 +67,7 @@ def int_check(question, low=None, high=None):
         # if input is not an integer, print error
         except ValueError:
             print(error)
+            print()
             continue
 
 # Prints out statements and applies characters around them
@@ -84,6 +87,7 @@ def instructions():
     instruction = string_checker("Would you like to see the instructions? ", ["yes", "no"])
 
     if instruction == "yes":
+        print()
         print("| | | | | Quiz Instructions | | | | |")
         print()
         print("This is a simple math based quiz")
@@ -98,12 +102,14 @@ statement_generator("| | | | | Welcome to The Math Quiz | | | | |", "-")
 print()
 instructions()
 
+
 # if user presses enter program loops
 go_again = ""
 while go_again == "":
     # gets user input for numbers and questions
     print()
     lowest = int_check("What is the lowest number you would like to use? ")
+    print()
     highest = int_check("What is the highest number you would like to use? ", lowest + 1)
     print()
     questions = int_check("How many questions would you like? ", 1, 10)
@@ -130,12 +136,14 @@ while go_again == "":
 
         # generates equations and equation answers from randomly generated operations and numbers
         display_equation = "What does {} {} {} equal? ".format(equation_num1, operation, equation_num2)
+        print()
         equation = "{} {} {}".format(equation_num1, operation, equation_num2)
         correct_answer = eval(equation)
-        print()
+        
 
         # generates answer for any equation randomly generated
         answer = int_check(display_equation, -(highest * highest), (highest * highest))
+        print()
 
         # compares user answer to actual answer and displays feedback
         if answer == correct_answer:
